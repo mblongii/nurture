@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
-$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/classes")
-Dir.glob("#{File.dirname(__FILE__)}/classes/*.rb") { |classes| require File.basename(classes, '.*') }
+Dir[File.dirname(__FILE__) + '/classes/*.rb'].each {|file| require file }
 
 # Create Droppers
 # Food
