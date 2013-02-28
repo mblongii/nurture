@@ -1,0 +1,15 @@
+* Plant
+** #living
+*** living
+**** SUCCESS should be true
+* Summary
+Finished in *0.001979 seconds*
+1 example, 0 failures
+  :PROPERTIES:
+    :VISIBILITY: children
+  :END:
+#+DRAWERS: DETAILS PROPERTIES
+#+TODO: FAILED PENDING_FIXED PENDING | SUCCESS
+
+Randomized with seed 46026
+
