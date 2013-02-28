@@ -4,23 +4,26 @@ class Plant
     @name   = name
     @height = 0
     @health = {
-      nutrients: 0,
-      infestation: 10,
-      hydration: 0
+      nutrients: 1,
+      infestation: 0,
+      hydration: 1
     }
   end
 
   def absorb(affects, power)
-    puts "#{affects}: #{ self.health[:"#{affects}"] += power} \n"
+    @health[:"#{affects}"] += power
   end
 
   def living
-    if self.health[:infestation] <= 0 && 
-      self.health[:nutrients] >= 1 && 
-      self.health[:hydration] >= 1
-      return true
-    else
-      return false
-    end
+    @health[:infestation] <= 0 &&
+      @health[:nutrients] >= 1 &&
+      @health[:hydration] >= 1
+  end
+
+  def to_s
+    "\n#{@name}'s stats\n
+    \tnutrients: #{@health[:infestation]}\n
+    \tinfestation: #{@health[:nutrients]}\n
+    \thydration: #{@health[:hydration]}"
   end
 end
