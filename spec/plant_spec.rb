@@ -5,7 +5,7 @@ describe Plant do
   let(:rose) {Plant.new('Rose')}
   subject {rose}
 
-  describe '#living' do
+  describe '#alive?' do
     its(:alive?) {should be_true}
   end
 end
