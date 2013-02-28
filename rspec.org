@@ -1,9 +1,9 @@
 * Plant
-** #living
-*** living
+** #alive?
+*** alive?
 **** SUCCESS should be true
 * Summary
-Finished in *0.001979 seconds*
+Finished in *0.001842 seconds*
 1 example, 0 failures
   :PROPERTIES:
     :VISIBILITY: children
@@ -11,5 +11,5 @@ Finished in *0.001979 seconds*
 #+DRAWERS: DETAILS PROPERTIES
 #+TODO: FAILED PENDING_FIXED PENDING | SUCCESS
 
-Randomized with seed 46026
+Randomized with seed 16137
 
