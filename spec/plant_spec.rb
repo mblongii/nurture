@@ -6,6 +6,6 @@ describe Plant do
   subject {rose}
 
   describe '#living' do
-    its(:living) {should be_true}
+    its(:alive?) {should be_true}
   end
 end

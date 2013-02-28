@@ -14,7 +14,7 @@ class Plant
     @health[:"#{affects}"] += power
   end
 
-  def living
+  def alive?
     @health[:infestation] <= 0 &&
       @health[:nutrients] >= 1 &&
       @health[:hydration] >= 1
