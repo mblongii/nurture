@@ -1,30 +1,28 @@
 #!/usr/bin/env ruby
 Dir[File.dirname(__FILE__) + '/classes/*.rb'].each {|file| require file}
 
+range = -1..1
 # Create Droppers
 # Food
-range = -1..0
-food = Dropper.new("nutrients", rand(range))
+food = Dropper.new("nutrients", range)
 
 # Poison
-range = 0..1
-poison = Dropper.new("infestation", rand(range))
+poison = Dropper.new("infestation", range)
 
 # Water
-range = -1..0
-water = Dropper.new("hydration", rand(range))
+water = Dropper.new("hydration", range)
 
 # Create plants
 # Rose
 rose = Plant.new("Rose")
 
 # Action!
-food.drop(rose)
-poison.drop(rose)
-water.drop(rose)
+rose.absorb food
+rose.absorb poison
+rose.absorb water
 puts rose
 
-if rose.living
+if rose.alive?
   puts "\nStayin' Alive!\n\n"
 else
   puts "\nTry again.\n\n"

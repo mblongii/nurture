@@ -10,8 +10,8 @@ class Plant
     }
   end
 
-  def absorb(affects, power)
-    @health[:"#{affects}"] += power
+  def absorb(affect)
+    @health[:"#{affect}"] += affect.power
   end
 
   def alive?

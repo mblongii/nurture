@@ -1,16 +1,11 @@
 class Dropper
-  attr_accessor :affects, :volume, :power, :plant
-  def initialize(affects, power)
-    @plant    = plant
-    @affects  = affects
-    @volume   = 120 # mL
-    @power    = power
+  attr_reader :power
+  def initialize(affect, power_range)
+    @affect = affect
+    @power  = rand(power_range)
   end
 
-  def drop(plant)
-    if @volume > 0
-      @volume -= 20 # 6 drops
-      plant.absorb(@affects, @power)
-    end
+  def to_s
+    @affect
   end
 end
