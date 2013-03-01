@@ -1,8 +1,7 @@
 class Plant
-  attr_accessor :name, :height, :health
+  attr_accessor :name, :health
   def initialize(name)
     @name   = name
-    @height = 0
     @health = {
       nutrients: 1,
       infestation: 0,
@@ -15,15 +14,26 @@ class Plant
   end
 
   def alive?
-    @health[:infestation] <= 0 &&
-      @health[:nutrients] >= 1 &&
-      @health[:hydration] >= 1
+    @health[:infestation] < 1 &&
+      @health[:nutrients] > 0 &&
+      @health[:hydration] > 0
   end
 
   def to_s
     "\n#{@name}'s stats\n
-    \tnutrients: #{@health[:infestation]}\n
-    \tinfestation: #{@health[:nutrients]}\n
-    \thydration: #{@health[:hydration]}"
+    \tnutrients: #{@health[:nutrients]}\n
+    \tinfestation: #{@health[:infestation]}\n
+    \thydration: #{@health[:hydration]}
+    #{message}"
+  end
+
+  private
+
+  def message
+    if alive?
+      "\nStayin' Alive!\n\n"
+    else
+      "\nTry again.\n\n"
+    end
   end
 end
