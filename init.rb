@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-Dir[File.dirname(__FILE__) + '/classes/*.rb'].each {|file| require file}
+require_relative 'classes/Dropper'
+require_relative 'classes/Plant'
 
 range = -1..1
 # Create Droppers

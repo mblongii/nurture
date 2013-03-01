@@ -19,6 +19,8 @@ class Plant
       @health[:hydration] > 0
   end
 
+  private
+
   def to_s
     "\n#{@name}'s stats\n
     \tnutrients: #{@health[:nutrients]}\n
@@ -26,8 +28,6 @@ class Plant
     \thydration: #{@health[:hydration]}
     #{message}"
   end
-
-  private
 
   def message
     if alive?

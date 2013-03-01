@@ -2,10 +2,13 @@
 ** after creation
 *** alive?
 **** SUCCESS should be true
-** when it has no nutrients
+** when it is not hydrated
 *** alive?
 **** SUCCESS should be false
 ** when it is infested
+*** alive?
+**** SUCCESS should be false
+** when it has no nutrients
 *** alive?
 **** SUCCESS should be false
 ** when it is not infested
@@ -13,11 +16,8 @@
 **** and it has nutrients
 ***** alive?
 ****** SUCCESS should be true
-** when it is not hydrated
-*** alive?
-**** SUCCESS should be false
 * Summary
-Finished in *0.00336 seconds*
+Finished in *0.003382 seconds*
 5 examples, 0 failures
   :PROPERTIES:
     :VISIBILITY: children
@@ -25,5 +25,5 @@ Finished in *0.00336 seconds*
 #+DRAWERS: DETAILS PROPERTIES
 #+TODO: FAILED PENDING_FIXED PENDING | SUCCESS
 
-Randomized with seed 61315
+Randomized with seed 62602
 
