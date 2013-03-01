@@ -1,15 +1,29 @@
 * Plant
+** when it is infested
+*** alive?
+**** SUCCESS should be false
+** when it is not infested
+*** and it is hydrated
+**** and it has nutrients
+***** alive?
+****** SUCCESS should be true
 ** after creation
 *** alive?
 **** SUCCESS should be true
+** when it is not hydrated
+*** alive?
+**** SUCCESS should be false
+** when it has no nutrients
+*** alive?
+**** SUCCESS should be false
 * Summary
-Finished in *0.00189 seconds*
-1 example, 0 failures
+Finished in *0.003307 seconds*
+5 examples, 0 failures
   :PROPERTIES:
     :VISIBILITY: children
   :END:
 #+DRAWERS: DETAILS PROPERTIES
 #+TODO: FAILED PENDING_FIXED PENDING | SUCCESS
 
-Randomized with seed 35135
+Randomized with seed 60616
 
